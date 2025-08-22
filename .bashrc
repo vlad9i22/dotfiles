@@ -128,7 +128,7 @@ set -o vi
 
 # Add work scripts to global my path
 PATH=$PATH:/home/vlad/Work/scripts
-
+PATH=$PATH:/home/vlad/Apps/anki-25.02.4-linux-qt6
 
 qcd () {
     case "$1" in
@@ -157,6 +157,15 @@ export NVM_DIR="$HOME/.nvm"
 #if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 #  exec tmux
 #fi
+
+# Turn on coredumps
 ulimit -c unlimited
 
+# A way to store configs
 alias config='/usr/bin/git --git-dir=/home/vlad/.cfg/ --work-tree=/home/vlad'
+
+# Save a history after command (solves the issue of not saving history
+# in tmux sessions
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+# Can also reload history from all sessions, but that seems not good
+# export PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
