@@ -118,6 +118,9 @@ fi
 alias vv='nvim'
 export PATH="$PATH:/home/vlad/Apps/neovim"
 
+# Flutter
+export PATH="$HOME/Apps/flutter/flutter/bin:$PATH"
+
 
 export VCPKG_STABLE=~/Apps/vcpkg/
 alias kolourpaint="kolourpaint /home/vlad/Pictures/default.png"
