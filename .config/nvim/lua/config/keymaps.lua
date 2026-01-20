@@ -1,8 +1,11 @@
-vim.g.mapleader = " "
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
 
 -- Fast global buffer copy
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
+
 
 -- Move into the ifs
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -29,11 +32,9 @@ vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- change current word
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+-- vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
 -- chmod +x for current file
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-
-vim.keymap.set('n', '<leader><F5>', vim.cmd.UndotreeToggle)
-
-vim.keymap.set('n', '<leader>h', vim.cmd.ClangdSwitchSourceHeader)
+vim.keymap.set("n", "<leader>cp", [[:let @" = expand("%")]])
