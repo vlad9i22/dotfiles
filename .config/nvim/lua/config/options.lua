@@ -47,5 +47,7 @@ vim.opt.listchars='tab:>-'
 -- while typing std::cin for example;
 vim.opt.cinkeys='0{,0},0),0],0#,!^F,o,O,e'
 
+vim.opt_local.indentkeys = '.0{,0},0),0],0#,!^F,o,O,e,0=end,0=until'
+
 vim.opt.clipboard = ""
 
