@@ -7,8 +7,8 @@ return {
             "--background-index",
             "--clang-tidy",
             "--header-insertion=iwyu",
-            "--completion-style=detailed",
-            "--function-arg-placeholders",
+           "--completion-style=detailed",
+            -- "--function-arg-placeholders=true",
             "--fallback-style=google",
             "--rename-file-limit=0",
             "--log=verbose"

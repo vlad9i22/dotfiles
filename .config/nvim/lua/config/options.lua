@@ -51,3 +51,5 @@ vim.opt_local.indentkeys = '.0{,0},0),0],0#,!^F,o,O,e,0=end,0=until'
 
 vim.opt.clipboard = ""
 
+vim.opt.mouse = "a"
+
